@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manoj K R - SAP SuccessFactors Consultant</title>
-    <meta name="description" content="SAP Certified SuccessFactors Consultant specializing in LMS and People Analytics with 3+ years of experience">
+    <title>Manoj K R - Senior SAP SuccessFactors Consultant</title>
     <style>
         * {
             margin: 0;
@@ -13,363 +12,524 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         
-        header {
-            background: linear-gradient(135deg, #0F4C81 0%, #008FD3 100%);
-            color: white;
-            padding: 60px 20px;
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+        }
+        
+        .promotion-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
         
         h1 {
-            font-size: 2.5em;
+            font-size: 2.5rem;
             margin-bottom: 10px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            color: #666;
             margin-bottom: 20px;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .experience-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .role {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .role::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .role h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        
+        .role .company {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .role .duration {
+            font-size: 0.95rem;
+            opacity: 0.8;
+        }
+        
+        .project {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 0 10px 10px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .project:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .project .client {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .project .scope {
+            margin-top: 8px;
+            color: #666;
+        }
+        
+        .certifications {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cert-item {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .education {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .edu-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .edu-item h4 {
+            color: #764ba2;
+            margin-bottom: 5px;
         }
         
         .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
         
         .contact-info a {
-            color: white;
+            display: block;
+            color: #667eea;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            padding: 10px 20px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 25px;
-            transition: all 0.3s;
+            margin: 5px 0;
+            transition: color 0.3s ease;
         }
         
         .contact-info a:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
+            color: #764ba2;
         }
         
-        .section {
-            background: white;
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-        
-        h2 {
-            color: #0F4C81;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            border-bottom: 3px solid #F0AB00;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .skill-category {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #0F4C81;
-        }
-        
-        .skill-category h3 {
-            color: #0F4C81;
-            margin-bottom: 10px;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-        }
-        
-        .skill-category li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .skill-category li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #008FD3;
-            font-weight: bold;
-        }
-        
-        .experience-item {
-            margin-bottom: 30px;
-            padding-left: 30px;
-            border-left: 3px solid #0F4C81;
-            position: relative;
-        }
-        
-        .experience-item:before {
-            content: "";
-            position: absolute;
-            left: -8px;
-            top: 0;
-            width: 13px;
-            height: 13px;
-            background: #0F4C81;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-        
-        .experience-item h3 {
-            color: #0F4C81;
-            margin-bottom: 5px;
-        }
-        
-        .experience-item .date {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-        
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .stat-box {
-            background: linear-gradient(135deg, #0F4C81 0%, #008FD3 100%);
+        .stats-tile {
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
             color: white;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 30px 20px;
+            border-radius: 15px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .stats-tile:hover {
+            transform: translateY(-5px);
         }
         
         .stat-number {
-            font-size: 2.5em;
+            font-size: 3rem;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         .stat-label {
+            font-size: 1rem;
             opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .certification-badge {
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .expertise-tile {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .expertise-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+        
+        .expertise-tile h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .rating {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .skills-list {
             background: #f8f9fa;
             padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
         }
         
-        .certification-badge img {
-            width: 100px;
-            margin-bottom: 10px;
+        .skills-list h4 {
+            color: #667eea;
+            margin-bottom: 15px;
         }
         
-        .cta-button {
-            display: inline-block;
-            background: #F0AB00;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s;
+        .skills-list ul {
+            list-style: none;
+            padding: 0;
         }
         
-        .cta-button:hover {
-            background: #d49500;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        .skills-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 20px;
         }
         
-        @media (max-width: 768px) {
+        .skills-list li:before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+        }
+        
+        .skills-list li:last-child {
+            border-bottom: none;
+        }
+            .container {
+                padding: 10px;
+            }
+            
             h1 {
-                font-size: 2em;
+                font-size: 2rem;
             }
             
             .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .section {
-                padding: 20px;
+                position: static;
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="header">
+            <div class="promotion-badge">🎉 Recently Promoted - April 2025</div>
             <h1>Manoj K R</h1>
-            <p class="subtitle">SAP SuccessFactors Consultant | LMS & People Analytics Expert</p>
-            <p>Transforming HR through intelligent technology solutions</p>
-            <div class="contact-info">
-                <a href="mailto:manojkr8892@gmail.com">📧 manojkr8892@gmail.com</a>
-                <a href="https://www.linkedin.com/in/manojkr8892/" target="_blank">🔗 LinkedIn</a>
-                <a href="tel:+918892714068">📱 +91 88927 14068</a>
-            </div>
+            <p class="subtitle">Senior SAP SuccessFactors Consultant | LMS & People Analytics Expert</p>
+            <p class="description">
+                <strong>Transforming HR through intelligent technology solutions</strong><br><br>
+                SAP Certified SuccessFactors Consultant with 3+ years of specialized experience in implementing and optimizing Learning Management Systems (LMS) and People Analytics solutions. Senior Associate - Technology Consulting at PwC India. Successfully delivered 3 LMS implementations and managed 4+ Application Maintenance Support (AMS) projects across pharmaceutical, government, automotive, and technology sectors in India, Canada, and Australia.
+            </p>
         </header>
 
-        <section class="section">
-            <h2>About Me</h2>
-            <p>SAP Certified SuccessFactors Consultant with 3 years of specialized experience in implementing and optimizing Learning Management Systems (LMS) and People Analytics solutions. Currently working as an Associate Technology Consultant at PwC India, I have successfully delivered 3 LMS implementations and managed 4 Application Maintenance Support (AMS) projects across pharmaceutical, government, automotive, and technology sectors in India, Canada, and Australia. Currently engaged in a Performance Management and Goal Management (PMGM) implementation project and an AMS project for the Succession and Career Development Planning (SCDP) module.</p>
+        <section class="experience-section">
+            <h2 class="section-title">Professional Experience</h2>
             
-            <div class="stats">
-                <div class="stat-box">
+            <div class="role">
+                <h3>Senior Associate - Technology Consulting</h3>
+                <div class="company">PwC India</div>
+                <div class="duration">April 2025 - Present</div>
+            </div>
+            
+            <div class="project">
+                <div class="scope"><strong>▶ PMGM Implementation:</strong> Working on a comprehensive Performance Management and Goal Management (PMGM) implementation project, contributing to end-to-end solution delivery and client engagement</div>
+                <div class="scope"><strong>▶ SCDP Module AMS Support:</strong> Managing Application Maintenance Support for Succession and Career Development Planning (SCDP) module, ensuring optimal system performance and user satisfaction</div>
+                <div class="scope"><strong>▶ LMS AMS Support:</strong> Managing AMS support for 2 LMS projects which includes one Validated LMS System, as well as helping with report build and maintenance using Plateau Report Designer (PRD), maintaining system stability and delivering continuous improvements</div>
+                <div class="scope"><strong>▶ Senior Consulting Role:</strong> Elevated to senior consulting position with increased responsibilities in project leadership, client relationship management, and technical solution delivery</div>
+            </div>
+
+            <div class="role">
+                <h3>Associate - Technology Consulting</h3>
+                <div class="company">PwC India</div>
+                <div class="duration">July 2022 - March 2025</div>
+            </div>
+            
+            <div class="project">
+                <div class="scope"><strong>▶ End-to-End SuccessFactors LMS Implementation:</strong> Led 3 end-to-end SF LMS implementations from kick-off to go-live with post-implementation Hypercare support</div>
+                <div class="scope"><strong>▶ People Analytics & Reporting:</strong> Designed and implemented complex Story reports using People Analytics and custom LMS reports using Plateau Report Designer, delivering actionable business insights for improved decision-making</div>
+                <div class="scope"><strong>▶ Integration Projects:</strong> Played a key role in the integration of SuccessFactors LMS with external systems, such as a Controlled Document Management System, Udemy, and Microsoft Teams ensuring seamless data flow and improved process efficiency</div>
+                <div class="scope"><strong>▶ Application Maintenance Support:</strong> Provided support for over 4 SuccessFactors Learning Management Systems including one validated Learning Management System, ensuring smooth operations and addressing the system</div>
+                <div class="scope"><strong>▶ Cross-Module Expertise:</strong> Contributed to various modules, including configuring People Analytics and LMS, and delivering tailored solutions to meet client-specific requirements</div>
+                <div class="scope"><strong>▶ Data Migration Project:</strong> Completed a data migration project for a pharmaceutical entity taking care of the data migration along with testing processes such as OQ, MQ, and PQ in a validated LMS environment</div>
+                <div class="scope"><strong>▶ Documentation & Training:</strong> Authored comprehensive documentation, including configuration workbooks, user manuals, and training materials, to facilitate smooth system adoption and knowledge transfer</div>
+                <div class="scope"><strong>▶ Key Client-Focused Custom Development:</strong> Led a custom development project for converting PDF files into SCORM 1.2 packages using Python Programming, resolving a major client issue related to e-learning content distribution and compliance</div>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2 class="section-title">Projects Summary</h2>
+            
+            <div class="project">
+                <h4>SuccessFactors People Analytics and LMS Implementation</h4>
+                <div class="client"><strong>Client:</strong> Digital and Cloud Transformation Entity, India</div>
+                <div class="scope"><strong>Scope:</strong> End-to-end implementation of People Analytics and LMS modules for comprehensive workforce insights and learning management.</div>
+            </div>
+
+            <div class="project">
+                <h4>SuccessFactors LMS Implementation</h4>
+                <div class="client"><strong>Client:</strong> Multinational Automotive Manufacturing Entity, India</div>
+                <div class="scope"><strong>Scope:</strong> Complete LMS implementation achieving 95% user adoption within 3 months and 40% reduction in training delivery time.</div>
+            </div>
+
+            <div class="project">
+                <h4>SuccessFactors LMS Implementation</h4>
+                <div class="client"><strong>Client:</strong> Law Enforcement Entity, Canada</div>
+                <div class="scope"><strong>Scope:</strong> Delivered LMS with multi-language support and compliance tracking, significantly improving mandatory training compliance.</div>
+            </div>
+
+            <div class="project">
+                <h4>SuccessFactors LMS Support</h4>
+                <div class="client"><strong>Client:</strong> Government Owned Entity, Australia</div>
+                <div class="scope"><strong>Scope:</strong> Providing ongoing Application Maintenance Support for LMS, ensuring 99.9% system uptime and continuous improvement.</div>
+            </div>
+
+            <div class="project">
+                <h4>SuccessFactors People Analytics Implementation</h4>
+                <div class="client"><strong>Client:</strong> Pharmaceutical Manufacturing Entity, India</div>
+                <div class="scope"><strong>Scope:</strong> Implemented People Analytics module with custom Story Reports for data-driven HR decision making and workforce planning.</div>
+            </div>
+
+            <div class="project">
+                <h4>SuccessFactors Validated LMS Support</h4>
+                <div class="client"><strong>Client:</strong> Multinational Pharmaceutical Manufacturing Entity, India</div>
+                <div class="scope"><strong>Scope:</strong> Led a data migration project for validated LMS with complete OQ, MQ, and PQ testing processes. Managing AMS support for 2+ years, achieving zero compliance violations with 100% data integrity.</div>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2 class="section-title">Key Achievements</h2>
+            
+            <div class="expertise-grid">
+                <div class="stats-tile">
                     <div class="stat-number">3</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
-                <div class="stat-box">
+                <div class="stats-tile">
                     <div class="stat-number">3</div>
                     <div class="stat-label">LMS Implementations</div>
                 </div>
-                <div class="stat-box">
+                <div class="stats-tile">
                     <div class="stat-number">4</div>
                     <div class="stat-label">LMS AMS Projects</div>
                 </div>
-                <div class="stat-box">
+                <div class="stats-tile">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Client Satisfaction</div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Core Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Primary Skills</h3>
-                    <ul>
-                        <li>SAP SuccessFactors LMS</li>
-                        <li>People Analytics - Story Reports</li>
-                        <li>Plateau Report Designer (SQL)</li>
-                        <li>Validated LMS (vLMS)</li>
-                        <li>Custom Report Development</li>
-                        <li>SuccessFactors PMGM</li>
-                        <li>SuccessFactors SCDP</li>
-                    </ul>
+        <section class="experience-section">
+            <h2 class="section-title">Skills Summary</h2>
+            
+            <div class="expertise-grid">
+                <div class="expertise-tile">
+                    <h4>SAP SuccessFactors Learning Management System (LMS)</h4>
+                    <div class="rating">9/10</div>
                 </div>
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li>Python Programming</li>
-                        <li>SQL & Database Management</li>
-                        <li>System Integration</li>
-                        <li>SCORM Standards</li>
-                        <li>Data Migration & Validation</li>
-                    </ul>
+                <div class="expertise-tile">
+                    <h4>SuccessFactors People Analytics – Story Reports</h4>
+                    <div class="rating">8/10</div>
                 </div>
-                <div class="skill-category">
-                    <h3>Industry Expertise</h3>
-                    <ul>
-                        <li>Pharmaceutical (Validated Systems)</li>
-                        <li>Government & Public Sector</li>
-                        <li>Automotive Manufacturing</li>
-                        <li>Technology & Digital Transformation</li>
-                    </ul>
+                <div class="expertise-tile">
+                    <h4>SAP SuccessFactors Performance Management and Goal Management</h4>
+                    <div class="rating">5/10</div>
+                </div>
+                <div class="expertise-tile">
+                    <h4>SAP SuccessFactors Employee Central</h4>
+                    <div class="rating">2/10</div>
                 </div>
             </div>
-        </section>
-
-        <section class="section">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <h3>Associate Technology Consultant - PwC India</h3>
-                <p class="date">July 2022 - Present</p>
+            
+            <div class="skills-list">
+                <h4>Additional Skills:</h4>
                 <ul>
-                    <li>Led 3 end-to-end SuccessFactors LMS implementations from kick-off to go-live, including comprehensive hypercare support</li>
-                    <li>Currently leading Performance Management and Goal Management (PMGM) module implementation for a major technology client</li>
-                    <li>Providing AMS support for Succession and Career Development Planning (SCDP) module implementation</li>
-                    <li>Developed innovative Python-based solution to convert PDF files into SCORM 1.2 packages, reducing content distribution time by 70% and resolving critical compliance tracking issues</li>
-                    <li>Successfully integrated SuccessFactors LMS with external platforms including Controlled Document Management System, Udemy, and Microsoft Teams</li>
-                    <li>Designed and implemented 25+ custom Story Reports using People Analytics to deliver actionable workforce insights</li>
-                    <li>Completed complex data migration project for pharmaceutical entity, managing OQ (Operational Qualification), MQ (Migration Qualification), and PQ (Performance Qualification) testing in validated environment</li>
-                    <li>Authored comprehensive technical documentation including configuration workbooks, user manuals, and training materials facilitating knowledge transfer</li>
-                    <li>Maintained 99.9% system uptime across all production environments through proactive monitoring and issue resolution</li>
-                    <li>Conducted 20+ client and in-house training sessions and workshops on SuccessFactors LMS and reporting capabilities</li>
+                    <li>Plateau Report Designer (SQL)</li>
+                    <li>Custom Report Design and Development</li>
+                    <li>Post-Implementation Hypercare Support</li>
+                    <li>SuccessFactors Validated Learning Management System (vLMS)</li>
+                    <li>SuccessFactors LMS Release Management</li>
+                    <li>Basics of Python Programming</li>
                 </ul>
             </div>
         </section>
-
-        <section class="section">
-            <h2>Key Projects</h2>
-            <div class="experience-item">
-                <h3>SuccessFactors People Analytics and LMS Implementation</h3>
-                <p><strong>Client:</strong> Digital and Cloud Transformation Entity, India<br>
-                <strong>Scope:</strong> End-to-end implementation of People Analytics and LMS modules for comprehensive workforce insights and learning management.</p>
-            </div>
-            <div class="experience-item">
-                <h3>SuccessFactors LMS Implementation</h3>
-                <p><strong>Client:</strong> Multinational Automotive Manufacturing Entity, India<br>
-                <strong>Scope:</strong> Complete LMS implementation achieving 95% user adoption within 3 months and 40% reduction in training delivery time.</p>
-            </div>
-            <div class="experience-item">
-                <h3>SuccessFactors LMS Implementation</h3>
-                <p><strong>Client:</strong> Law Enforcement Entity, Canada<br>
-                <strong>Scope:</strong> Delivered LMS with multi-language support and compliance tracking, significantly improving mandatory training compliance.</p>
-            </div>
-            <div class="experience-item">
-                <h3>SuccessFactors LMS Support</h3>
-                <p><strong>Client:</strong> Government Owned Entity, Australia<br>
-                <strong>Scope:</strong> Providing ongoing Application Maintenance Support for LMS, ensuring 99.9% system uptime and continuous improvement.</p>
-            </div>
-            <div class="experience-item">
-                <h3>SuccessFactors People Analytics Implementation</h3>
-                <p><strong>Client:</strong> Pharmaceutical Manufacturing Entity, India<br>
-                <strong>Scope:</strong> Implemented People Analytics module with custom Story Reports for data-driven HR decision making and workforce planning.</p>
-            </div>
-            <div class="experience-item">
-                <h3>SuccessFactors Validated LMS Support</h3>
-                <p><strong>Client:</strong> Multinational Pharmaceutical Manufacturing Entity, India<br>
-                <strong>Scope:</strong> Led a data migration project for validated LMS with complete OQ, MQ, and PQ testing processes. Managing AMS support for 2 years, achieving zero compliance violations with 100% data integrity.</p>
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-item">
+                🏆 SAP Certified Associate - Implementation Consultant - SAP SuccessFactors Learning (2405)
             </div>
         </section>
 
-        <section class="section">
-            <h2>Certifications</h2>
-            <div class="certification-badge">
-                <h3>🏆 SAP Certified Associate</h3>
-                <p>Implementation Consultant - SAP SuccessFactors Learning (2405)</p>
+        <section class="education">
+            <h2 class="section-title">Education</h2>
+            <div class="edu-item">
+                <h4>Master of Technology (M.Tech) - Construction Technology and Management</h4>
+                <p>National Institute of Technology Karnataka, Surathkal (2020-2022)</p>
+            </div>
+            <div class="edu-item">
+                <h4>Bachelor of Engineering (B.E.) - Civil Engineering</h4>
+                <p>Ramaiah Institute of Technology, Bengaluru (2015-2019)</p>
             </div>
         </section>
+    </div>
 
-        <section class="section">
-            <h2>Education</h2>
-            <p><strong>Master of Technology (M.Tech)</strong> - Construction Technology and Management<br>
-            National Institute of Technology Karnataka, Surathkal (2020-2022)</p>
-            <p><strong>Bachelor of Engineering (B.E.)</strong> - Civil Engineering<br>
-            Ramaiah Institute of Technology, Bengaluru (2015-2019)</p>
-        </section>
+    <div class="contact-info">
+        <strong>Contact</strong>
+        <a href="tel:+918892714068">📱 +91 88927 14068</a>
+        <a href="mailto:manojkr8892@gmail.com">✉️ manojkr8892@gmail.com</a>
+        <a href="https://linkedin.com/in/manojkr8892/" target="_blank">🔗 LinkedIn</a>
+        <a href="https://manojkr88.github.io/" target="_blank">🌐 Portfolio</a>
     </div>
 </body>
 </html>
